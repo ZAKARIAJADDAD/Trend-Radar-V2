@@ -1,0 +1,50 @@
+name: "🎮 Trend Radar — Automated Scan"
+
+on:
+  schedule:
+    # Run every 30 minutes during active hours (7 AM - 11 PM Morocco time / UTC+1)
+    - cron: '*/30 6-22 * * *'
+  workflow_dispatch:  # Allow manual trigger from GitHub
+
+jobs:
+  scan-trends:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install -r trend-radar/requirements.txt
+
+      - name: 🔍 Run Trend Scan
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        working-directory: trend-radar
+        run: |
+          python trend_radar.py
+
+      - name: 💾 Cache seen items
+        uses: actions/cache@v4
+        with:
+          path: trend-radar/data/seen_items.json
+          key: seen-items-${{ github.run_id }}
+          restore-keys: |
+            seen-items-
+
+      - name: 📤 Upload digest artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trend-digest-${{ github.run_id }}
+          path: trend-radar/data/digests/
+          retention-days: 30
