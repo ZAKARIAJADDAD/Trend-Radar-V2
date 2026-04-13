@@ -1,0 +1,50 @@
+{
+    "morocco_trends": {
+        "news_feeds": [
+            {"name": "Hespress عربي", "url": "https://www.hespress.com/feed", "lang": "ar"},
+            {"name": "Hespress FR", "url": "https://fr.hespress.com/feed", "lang": "fr"},
+            {"name": "Le360", "url": "https://fr.le360.ma/feed", "lang": "fr"},
+            {"name": "Challenge.ma", "url": "https://www.challenge.ma/feed", "lang": "fr"},
+            {"name": "TelQuel", "url": "https://telquel.ma/feed", "lang": "fr"},
+            {"name": "H24info", "url": "https://www.h24info.ma/feed", "lang": "fr"},
+            {"name": "Alyaoum24", "url": "https://www.alyaoum24.com/feed", "lang": "ar"},
+            {"name": "Medias24", "url": "https://medias24.com/feed", "lang": "fr"}
+        ],
+        "google_trends_rss": "https://trends.google.com/trending/rss?geo=MA",
+        "twitter_trends": "https://trends24.in/morocco/",
+        "youtube_trending": "https://www.youtube.com/feed/trending?gl=MA",
+        "social_hashtags_morocco": [
+            "#المغرب", "#maroc", "#morocco", "#casablanca",
+            "#rabat", "#trendingmorocco", "#maroctrend",
+            "#darijavibes", "#moroccanstyle"
+        ]
+    },
+    "world_trends": {
+        "feeds": [
+            {"name": "BBC Top", "url": "https://feeds.bbci.co.uk/news/rss.xml", "lang": "en"},
+            {"name": "TechCrunch", "url": "https://techcrunch.com/feed/", "lang": "en"},
+            {"name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "lang": "en"},
+            {"name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "lang": "en"}
+        ]
+    },
+    "content_pillars": {
+        "keywords": [
+            "scandal", "scandale", "فضيحة", "exposed", "hack", "leaked",
+            "brand", "branding", "marketing", "pub", "publicité",
+            "AI", "intelligence artificielle", "algorithm", "خوارزمية",
+            "startup", "entrepreneur", "business", "entreprise",
+            "nike", "apple", "google", "meta", "amazon", "tesla", "zara",
+            "fashion", "mode", "luxe", "luxury", "streetwear",
+            "instagram", "tiktok", "youtube", "facebook", "social media",
+            "SEO", "e-commerce", "shopify", "website",
+            "morocco", "maroc", "المغرب",
+            "psychology", "manipulation", "pricing", "strategy",
+            "money", "argent", "فلوس", "crypto",
+            "football", "كرة القدم", "world cup", "mondial",
+            "education", "école", "جامعة", "bac", "باك",
+            "religion", "ramadan", "رمضان", "عيد",
+            "migration", "visa", "هجرة", "أوروبا",
+            "real estate", "عقار", "immobilier"
+        ]
+    }
+}
